@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-
+import Select from 'react-select';
 
 
 export default function Home() {
@@ -30,6 +30,64 @@ export default function Home() {
     });
 
 
+    const customStyles = {
+        control: (provided, state) => ({
+            ...provided,
+            border: 'none',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.05)',
+            borderRadius: '6px',
+            minHeight: '55px',
+            fontSize: '1rem',
+            padding: '0 10px',
+            backgroundColor: 'white',
+            fontFamily: 'var(--font-base)',
+            fontWeight: '600',
+            cursor: 'pointer',
+            '&:hover': {
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+            }
+        }),
+        menu: (provided) => ({
+            ...provided,
+            borderRadius: '6px',
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+            marginTop: '4px',
+            backgroundColor: 'white',
+            zIndex: 1000,
+        }),
+        option: (provided, state) => ({
+            ...provided,
+            backgroundColor: state.isFocused ? '#f0f0f0' : 'white',
+            color: '#333',
+            cursor: 'pointer',
+            fontFamily: 'var(--font-base)',
+            fontWeight: '600',
+            '&:hover': {
+                backgroundColor: '#f0f0f0',
+            }
+        }),
+        placeholder: (provided) => ({
+            ...provided,
+            color: '#999',
+            fontFamily: 'var(--font-base)',
+            fontWeight: '600',
+        }),
+        singleValue: (provided) => ({
+            ...provided,
+            color: '#333',
+            fontFamily: 'var(--font-base)',
+            fontWeight: '600',
+        }),
+        dropdownIndicator: (provided) => ({
+            ...provided,
+            color: '#999',
+            '&:hover': {
+                color: '#666',
+            }
+        }),
+        indicatorSeparator: () => ({ display: 'none' }),
+    };
+
     return (
         <div className="home-container">
             <div className="top-bar">
@@ -43,17 +101,21 @@ export default function Home() {
                         onChange={(e) => setSearch(e.target.value)}
                     />
                 </div>
-
-                <select
+                
+                <Select
                     className="region-select"
-                    value={selectedRegion}
-                    onChange={(e) => setSelectedRegion(e.target.value)}
-                >
-                    <option value="">Filter by Region</option>
-                    {regions.map(region => (
-                        <option key={region} value={region}>{region}</option>
-                    ))}
-                </select>
+                    styles={customStyles}
+                    options={[
+                        { value: '', label: 'Filter by Region' },
+                        ...regions.map(region => ({
+                        value: region,
+                        label: region
+                        }))
+                    ]}
+                    value={{ value: selectedRegion, label: selectedRegion || 'Filter by Region' }}
+                    onChange={(selectedOption) => setSelectedRegion(selectedOption.value)}
+                    isSearchable={false}
+                    />
             </div>
 
             <div className="countries-grid">

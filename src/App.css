@@ -38,13 +38,12 @@ body, html {
 }
 
 .header {
-  color: var(--color-bg);
+  color: var(--color-text);
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  width: 92%;
+  margin: 0 3.3rem;
   max-width: 1440px;
   height: auto;
   border-bottom: 4px groove var(--grey-50);
