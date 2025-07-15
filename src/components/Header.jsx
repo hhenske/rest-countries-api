@@ -7,7 +7,7 @@ export default function Header() {
   
     return (
     <header className="header">
-        <h2 className="site-title">Where in the world?</h2>
+        <h1 className="site-title">Where in the world?</h1>
         <button className="theme-toggle">
             <FontAwesomeIcon icon={faMoon} />Dark Mode
         </button>
