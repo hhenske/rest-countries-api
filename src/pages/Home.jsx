@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
@@ -10,9 +11,10 @@ export default function Home() {
     const [regions, setRegions] = useState([]);
     const [search, setSearch] = useState("");
     const [selectedRegion, setSelectedRegion] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("https://restcountries.com/v3.1/all?fields=name,region,flags,population,capital")
+        fetch("https://restcountries.com/v3.1/all?fields=name,region,flags,population,capital,cca3")
         .then(res => res.json())
         .then(data => {
             setCountries(data);
@@ -29,8 +31,8 @@ export default function Home() {
         );
     });
 
-
-    const customStyles = {
+    
+const customStyles = {
         control: (provided, state) => ({
             ...provided,
             border: 'none',
@@ -120,7 +122,12 @@ export default function Home() {
 
             <div className="countries-grid">
                 {filteredCountries.map(country => (
-                    <div key={country.cca3} className="country-card">
+                    <div 
+                        key={country.cca3 || country.name.common}
+                        className="country-card"
+                        onClick={() => navigate(`/country/${country.cca3}`)}
+                        style={{ cursor: 'pointer' }}
+                        >
                         <img src={country.flags.svg} alt={`${country.name.common} flag`} className="flag" />
                         <div className="card-body">
                             <h3>{country.name.common}</h3>
