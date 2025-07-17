@@ -93,6 +93,7 @@ h3, .card-body {
 p, card-body {
     font-size: 14px;
     font-weight: 300;
+    margin-bottom: 8px;
 }
 
 strong, card-body {
