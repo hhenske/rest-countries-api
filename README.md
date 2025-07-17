@@ -7,12 +7,12 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 <li>In country info cards, more space between ifno lines ✅</li>
 <li>In dark mode, button text should be "Light mode" even though not done in design pic ✅</li>
 <li>In light mode, mood icon should be outline, not filled in ✅</li>
-<li>Bottom edge of header does not have a border...may not even have a box-shadow in dark mode</li>
-<li>Variable for dark background should be the darkest shade of grey not blue - need variable for background in both modes</li>
-<li>In dark mode, the elements are the 2nd darkest shade of grey, not blue</li>
-<li>Inputs in dark mode are the element color and text inside is white</li>
-<li>search icon is white in dark mode</li>
-<li>Card backgrounds are also that element grey</li>
+<li>Bottom edge of header does not have a border...may not even have a box-shadow in dark mode ✅</li>
+<li>Variable for dark background should be the darkest shade of grey not blue - need variable for background in both modes ✅</li>
+<li>In dark mode, the elements are the 2nd darkest shade of grey, not blue ✅</li>
+<li>Inputs in dark mode are the element color and text inside is white ⚠️</li>
+<li>search icon is white in dark mode ✅</li>
+<li>Card backgrounds are also that element grey ✅</li>
 <li>Mobile needs work</li>
 <li>Accessibility: aria labels needed for buttons and inputs</li>
 </ul>

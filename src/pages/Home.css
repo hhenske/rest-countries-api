@@ -4,7 +4,7 @@
     padding: 2rem;
     max-width: 1440px;
     margin: 0 3.3rem;
-    background-color: var(--color-border);
+    background-color: var(--color-bg);
 
 }
 
@@ -19,12 +19,38 @@
     
 }
  
- 
+
+select.region-select {
+  background-color: var(--color-border);
+  color: var(--color-text);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
 .region-select {
     min-width: 220px;
     height: 55px;
     font-family: var(--font-base);
     font-weight: 600;
+    background-color: var(--color-border);
+    color: var(--color-text);
+    border: none;
+    border-radius: 6px;
+    padding: 0 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
 }
 
 .search-wrapper {
@@ -37,7 +63,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
   padding: 0 40px;
-  background-color: var(--color-elements);
+  background-color: var(--color-border);
+  color: var(--color-text);
 }
 
 .search-input {
@@ -45,6 +72,14 @@
     height: 55px;
     padding: 20px 40px; 
     border: 0;
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text);
+  border: none;
 }
 
 .search-icon {
@@ -53,6 +88,7 @@
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.1rem;
+    color: var(--color-text);
 }
 
 .countries-grid {
@@ -63,7 +99,7 @@
 }
 
 .country-card {
-    background-color: var(--color-elements);
+    background-color: var(--color-border);
     color: var(--color-text);
     border-radius: 5px;
     width: 250px;

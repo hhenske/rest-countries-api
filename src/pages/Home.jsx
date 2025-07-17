@@ -96,6 +96,7 @@ const customStyles = {
                 <div className="search-wrapper">
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon" />
                     <input 
+                        id="search-bar"
                         type="text"
                         placeholder="Search for a country..."
                         className="search-input"
@@ -105,6 +106,7 @@ const customStyles = {
                 </div>
                 
                 <Select
+                    id="region-select"
                     className="region-select"
                     styles={customStyles}
                     options={[
