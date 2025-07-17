@@ -4,15 +4,15 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 <h3>To do</h3>
 <ul>
-<li>In country info cards, more space between ifno lines ✅</li>
-<li>In dark mode, button text should be "Light mode" even though not done in design pic ✅</li>
-<li>In light mode, mood icon should be outline, not filled in ✅</li>
-<li>Bottom edge of header does not have a border...may not even have a box-shadow in dark mode ✅</li>
-<li>Variable for dark background should be the darkest shade of grey not blue - need variable for background in both modes ✅</li>
-<li>In dark mode, the elements are the 2nd darkest shade of grey, not blue ✅</li>
+<li><s>In country info cards, more space between ifno lines</s> ✅</li>
+<li><s>In dark mode, button text should be "Light mode" even though not done in design pic</s> ✅</li>
+<li><s>In light mode, mood icon should be outline, not filled in</s> ✅</li>
+<li><s>Bottom edge of header does not have a border...may not even have a box-shadow in dark mode</s> ✅</li>
+<li><s>Variable for dark background should be the darkest shade of grey not blue - need variable for background in both modes</s> ✅</li>
+<li><s>In dark mode, the elements are the 2nd darkest shade of grey, not blue</s> ✅</li>
 <li>Inputs in dark mode are the element color and text inside is white ⚠️</li>
-<li>search icon is white in dark mode ✅</li>
-<li>Card backgrounds are also that element grey ✅</li>
+<li><s>search icon is white in dark mode</s> ✅</li>
+<li><s>Card backgrounds are also that element grey</s> ✅</li>
 <li>Mobile needs work</li>
 <li>Accessibility: aria labels needed for buttons and inputs</li>
 </ul>
