@@ -16,9 +16,7 @@
     margin-top: .3rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
-    
 }
- 
 
 select.region-select {
   background-color: var(--color-border);
@@ -29,6 +27,7 @@ select.region-select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 
@@ -42,7 +41,7 @@ select.region-select {
     border: none;
     border-radius: 6px;
     padding: 0 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); */
     transition: background-color 0.3s ease, color 0.3s ease;
     appearance: none;
     -webkit-appearance: none;
@@ -59,7 +58,7 @@ select.region-select {
   max-width: 475px;
   min-width: 220px;
   height: 55px;
-  margin: 0 2.75rem;
+  /* margin: 0 2.75rem; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
   padding: 0 40px;
@@ -146,7 +145,28 @@ strong, card-body {
     .countries-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .region-select {
+    padding: 0;
+  }
+  
+    .top-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start; /* 👈 aligns all children to the left */
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: .3rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        margin: 0;
+        max-width: 600px;
+    }
 }
+
 
 @media (max-width: 600px) {
     .countries-grid {
