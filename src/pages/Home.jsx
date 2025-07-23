@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import Select from 'react-select';
+import CustomSelect from '../components/CustomSelect';
 
 
 export default function Home() {
@@ -25,11 +25,12 @@ export default function Home() {
     }, []);
 
     const filteredCountries = countries.filter(country => {
-        return (
-            country.name.common.toLowerCase().includes(search.toLowerCase()) &&
-            (selectedRegion ? country.region === selectedRegion : true)
-        );
-    });
+    return (
+        country.name.common.toLowerCase().includes(search.toLowerCase()) &&
+        (selectedRegion ? country.region === selectedRegion.value : true)
+    );
+});
+
 
     
 const customStyles = {
@@ -90,6 +91,11 @@ const customStyles = {
         indicatorSeparator: () => ({ display: 'none' }),
     };
 
+    const regionOptions = regions.map(region => ({
+    value: region,
+    label: region
+}));
+
     return (
         <div className="home-container">
             <div className="top-bar">
@@ -105,21 +111,11 @@ const customStyles = {
                     />
                 </div>
                 
-                <Select
-                    id="region-select"
-                    className="region-select"
-                    styles={customStyles}
-                    options={[
-                        { value: '', label: 'Filter by Region' },
-                        ...regions.map(region => ({
-                        value: region,
-                        label: region
-                        }))
-                    ]}
-                    value={{ value: selectedRegion, label: selectedRegion || 'Filter by Region' }}
-                    onChange={(selectedOption) => setSelectedRegion(selectedOption.value)}
-                    isSearchable={false}
-                    />
+                 <CustomSelect
+                    options={regionOptions}
+                    value={selectedRegion}
+                    onChange={setSelectedRegion}
+                />
             </div>
 
             <div className="countries-grid">
