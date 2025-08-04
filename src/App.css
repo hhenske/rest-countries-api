@@ -59,9 +59,9 @@ body {
   /* box-shadow: 0 4px 4px hsl(0, 0%, 50%); */
   font-family: var(--font-base);
   flex-wrap: wrap;
-  position: relative;
+  position: fixed;
+  top: 0;
   z-index: 1;
-  margin-top: 0;
 }
 
 .header::after {
