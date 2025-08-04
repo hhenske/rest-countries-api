@@ -171,6 +171,11 @@
         gap: 4rem;
     }
 
+    .back-button {
+        margin-top: 8rem;
+        margin-left: 0;
+    }
+
     .details-section {
         padding-left: 0;
     }
