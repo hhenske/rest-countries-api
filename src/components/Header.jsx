@@ -5,7 +5,9 @@ import { useEffect, useState } from 'react';
 
 
 
+
 export default function Header() {
+  console.log('Header component mounted')
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('theme') || 'light';
   });
@@ -22,6 +24,9 @@ export default function Header() {
   const isLight = theme === 'light';
   const icon = isLight ? regularMoon : solidMoon;
   const label = isLight ? 'Dark Mode' : 'Light Mode';
+
+  console.log('Current theme:', theme);
+
 
 
     return (

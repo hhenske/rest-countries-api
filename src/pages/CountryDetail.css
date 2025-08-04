@@ -1,7 +1,22 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    margin-top: 0 !important;
+}
+
 .country-detail-container {
     padding: 2rem;
     max-width: 1440px;
-    margin: 0 3.3rem;
+    margin: 134px 3.3rem;
     background-color: var(--color-border);
     font-family: var(--font-base);
 }
@@ -91,7 +106,7 @@
 .info-column p {
     margin: 0;
     font-size: 1rem;
-    line-height: 0.75;
+    line-height: 1;
     color: var(--color-text);
 }
 
@@ -108,7 +123,7 @@
 }
 
 .border-label {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--color-text);
     white-space: nowrap;
 }
@@ -119,7 +134,7 @@
     gap: 0.75rem;
 }
 
-.border-button {
+/* .border-button {
     padding: 0.25rem 0.5rem;
     background-color: var(--color-elements);
     color: var(--color-text);
@@ -133,7 +148,29 @@
     font-family: var(--font-base);
     width: 95px;
     height: 28px;
+} */
+
+.border-button {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--color-elements);
+  color: var(--color-text);
+  border: none;
+  border-radius: 2px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  font-family: var(--font-base);
+  min-width: 95px;
+  max-width: 150px;
+  height: auto;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
+  overflow-wrap: break-word;
 }
+
 
 .border-button:hover {
     transform: translateY(-1.5px);
@@ -178,6 +215,14 @@
     .border-buttons {
         width: 100%;
     }
+
+    .flag-section {
+    justify-content: center;
+  }
+
+  .country-flag {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
