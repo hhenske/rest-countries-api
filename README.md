@@ -2,22 +2,6 @@
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-<h3>To do</h3>
-<ul>
-<li><s>In country info cards, more space between ifno lines</s> ✅</li>
-<li><s>In dark mode, button text should be "Light mode" even though not done in design pic</s> ✅</li>
-<li><s>In light mode, mood icon should be outline, not filled in</s> ✅</li>
-<li><s>Bottom edge of header does not have a border...may not even have a box-shadow in dark mode</s> ✅</li>
-<li><s>Variable for dark background should be the darkest shade of grey not blue - need variable for background in both modes</s> ✅</li>
-<li><s>In dark mode, the elements are the 2nd darkest shade of grey, not blue</s> ✅</li>
-<li>Inputs in dark mode are the element color and text inside is white ⚠️</li>
-<li><s>search icon is white in dark mode</s> ✅</li>
-<li><s>Card backgrounds are also that element grey</s> ✅</li>
-<li>Get rid of border on searchbox focus</li>
-<li>Mobile needs work</li>
-<li>Accessibility: aria labels needed for buttons and inputs</li>
-</ul>
-
 ## Table of contents
 
 - [Overview](#overview)
